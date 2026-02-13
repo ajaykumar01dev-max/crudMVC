@@ -5,11 +5,14 @@ const connectDB = require("./config/db")
 
 
 const app = express();
-app.set("view engine", "hbs");
-app.use(express.static("public"));
-
 
 connectDB()
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.set("view engine", "hbs");
+app.use(express.static("public"));
 
 const PORT = process.env.PORT || 4000;
 

@@ -11,15 +11,15 @@
 <body>
     <h2>Edit User</h2>
 
-    <form action="/user/update/{{user._id}}" method="POST">
+    <form action="/user/edit/{{currentUser._id}}" method="POST">
         <label>Name:</label>
-        <input type="text" name="name" value="{{user.name}}" required />
+        <input type="text" name="name" value="{{currentUser.name}}" required />
 
         <label>Email:</label>
-        <input type="email" name="email" value="{{user.email}}" required />
+        <input type="email" name="email" value="{{currentUser.email}}" required />
 
         <label>Age:</label>
-        <input type="number" name="age" value="{{user.age}}" />
+        <input type="number" name="age" value="{{currentUser.age}}" />
 
         <button type="submit">Update</button>
     </form>
